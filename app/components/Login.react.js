@@ -78,6 +78,7 @@ var Login = React.createClass({
             <fieldset className="login__fieldset">
               <a className="login__button login__button--green" href="/auth/google">Login with Google</a>
             </fieldset>
+            <h1 className="login__header">Facebook Login Demo</h1>
            </div>
         );
       }
