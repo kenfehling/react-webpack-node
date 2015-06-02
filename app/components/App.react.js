@@ -18,7 +18,7 @@ var App = React.createClass({
                 this.setState({ user: response });
             };
             var data = { accessToken: accessToken };
-            //$.post('https://localhost:3000/user', data, callback.bind(this), 'json');
+            $.post('https://localhost:8000/user', data, callback.bind(this), 'json');
         }.bind(this));
         FacebookLogin.fbInit();
     },
