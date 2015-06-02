@@ -2,8 +2,6 @@
 
 /*global FB */
 
-var _ = require('lodash');
-
 var PERMISSIONS = 'email,public_profile,user_friends';  // user_likes
 var listeners = {};
 

@@ -1,9 +1,10 @@
 'use strict';
 var $ = require('jquery');
 var React = require('react');
-var FacebookLogin = require('../services/FacebookLogin');
 var RouteHandler = require('react-router').RouteHandler;
 var Navigation = require('../components/Navigation.react');
+var FacebookLogin = require('../services/FacebookLogin');
+var RestClient = require('../services/RestClient');
 
 require('../utils/initInitialImages');
 require('../scss/main.scss');
@@ -18,7 +19,7 @@ var App = React.createClass({
                 this.setState({ user: response });
             };
             var data = { accessToken: accessToken };
-            $.post('https://localhost:8000/user', data, callback.bind(this), 'json');
+            RestClient.post('/user', data, callback.bind(this));
         }.bind(this));
         FacebookLogin.fbInit();
     },

@@ -8,7 +8,7 @@ function toAbsolute(url) {
         return 'https://' + host + ":" + 8000 + url;
     }
     else {
-        return 'https://restify-api.herokuapp.com/' + url;
+        return 'https://restify-api.herokuapp.com' + url;
     }
 }
 
